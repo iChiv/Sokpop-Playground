@@ -10,7 +10,7 @@ public class TextFloating : MonoBehaviour
 
     public Transform worldSpaceCanvas;
 
-    public new Vector3 offset;
+    public Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
