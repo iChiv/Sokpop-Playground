@@ -58,7 +58,7 @@ public class PlayerFloating : MonoBehaviour
     // public void UpdateUprightForce(float elapsed)
     // {
     //     Quaternion characterCurrent = transform.rotation;
-    //     // Quaternion toGoal = ShortestRotation(,characterCurrent)
+    //     // Quaternion toGoal = ShortestRotation()
     //
     //     Vector3 rotAxis;
     //     float rotDegrees;
