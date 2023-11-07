@@ -2512,6 +2512,7 @@ GameObject:
   - component: {fileID: 2020971344468301501}
   - component: {fileID: 3627618870132362275}
   - component: {fileID: 3819899590932879699}
+  - component: {fileID: 150522515372193340}
   m_Layer: 2
   m_Name: tongue
   m_TagString: Untagged
@@ -2605,6 +2606,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &150522515372193340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481752214578752140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4179453abbac7cd409476eb1ec8acc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8163852185331371892
 GameObject:
   m_ObjectHideFlags: 0
