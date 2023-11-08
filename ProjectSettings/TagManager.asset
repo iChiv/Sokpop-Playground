@@ -8,6 +8,9 @@ TagManager:
   - CanKick
   - CanHit
   - UnderCarrot
+  - ShooterEnter
+  - Shooter
+  - Chick
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - ChickBase
+  - Player
   - 
   - 
   - 
