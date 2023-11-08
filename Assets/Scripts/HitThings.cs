@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class HitThings : MonoBehaviour
@@ -9,6 +10,8 @@ public class HitThings : MonoBehaviour
     public GameObject target;
     public float hitForce;
     private bool _hitReady;
+
+    public CinemachineImpulseSource ImpulseSource;
 
     private void Start()
     {
@@ -20,6 +23,7 @@ public class HitThings : MonoBehaviour
         if (_hitReady & Input.GetKeyDown(KeyCode.E))
         {
             target.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * hitForce, ForceMode.Impulse);
+            ImpulseSource.GenerateImpulse();
         }
     }
 
