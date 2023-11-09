@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Pool : MonoBehaviour
 {
+    public float drinkSpeed;
     private SpitController spitController;
     private GameObject _alpcaSpitPonint;
 
@@ -15,13 +16,13 @@ public class Pool : MonoBehaviour
         spitController = _alpcaSpitPonint.GetComponent<SpitController>();
     }
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             //UI
             spitController.isDrink = true;
-            spitController.spitTime += 5;
+            spitController.spitTime += drinkSpeed * Time.deltaTime;
         }
     }
 

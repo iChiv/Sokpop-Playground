@@ -14,6 +14,7 @@ TagManager:
   - Ground
   - Pool
   - Alpaca
+  - Spit
   layers:
   - Default
   - TransparentFX

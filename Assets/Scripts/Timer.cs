@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
     public float timeLimited;
 
     public float timeCountDown;
+
+    public GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,10 @@ public class Timer : MonoBehaviour
 
     public void GameFinished()
     {
-        Debug.Log("Happy time ends now~");
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        gameOver.SetActive(true);
+        playing = false;
+        
     }
 }

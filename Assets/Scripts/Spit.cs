@@ -8,17 +8,6 @@ public class Spit : MonoBehaviour
 {
     public ParticleSystem spitParticle;
 
-    //private void Awake()
-    //{
-    //    Rigidbody rb = GetComponent<Rigidbody>();
-    //    rb.velocity = transform.right * 10;
-    //}
-
-    private void Start()
-    {
-        // GetComponent<Collider>().isTrigger = true;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player"))
@@ -39,8 +28,9 @@ public class Spit : MonoBehaviour
         {
             Debug.Log(other.gameObject);
             //Vector3 collisionPoint = other.contacts);
+            ContactPoint contact = other.contacts[0];
 
-            //spitParticle.transform.position = collisionPoint;
+            spitParticle.transform.position = contact.point;
             spitParticle.Play();
 
             Destroy(gameObject,0.5f);

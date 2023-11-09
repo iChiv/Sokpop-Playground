@@ -13,7 +13,7 @@ public class SpitController : MonoBehaviour
 
     //public Camera camera;
 
-    [Range(0,100)]public int spitTime = 5;
+    [Range(0,100)]public float spitTime = 5;
 
     public bool isDrink=false;
 

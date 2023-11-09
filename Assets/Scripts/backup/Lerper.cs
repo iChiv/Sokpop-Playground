@@ -14,11 +14,7 @@ public class Lerper : MonoBehaviour
     [Range(0,1)]
     public float T;
     public float Speed; // Filling Per second
-
-
-
-
-
+    
     // Update is called once per frame
     void Update()
     {

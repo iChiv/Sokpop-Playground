@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class KickThings : MonoBehaviour
 {
     public GameObject pressE;
     public GameObject player;
     public GameObject target;
+    public GameObject alpaca;
     public float kickForce;
     private bool _kickReady;
+    
+    public CinemachineImpulseSource ImpulseSource;
 
     private void Start()
     {
@@ -21,10 +25,15 @@ public class KickThings : MonoBehaviour
         if (_kickReady & Input.GetKeyDown(KeyCode.E))
         {
             target.gameObject.GetComponent<Rigidbody>().AddForce((-player.transform.forward+player.transform.up) * kickForce, ForceMode.Impulse);
+            if (target.GetComponent<Bouns>() != null)
+            {
+                alpaca.GetComponent<DestoryBouns>().cucurbitHit += 1;
+            }
+            ImpulseSource.GenerateImpulse();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("CanKick"))
         {
