@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4090561000376074866}
   - component: {fileID: 2655003661689451096}
   - component: {fileID: 7546031566541259981}
-  - component: {fileID: 5481610907514301819}
   m_Layer: 0
   m_Name: Torus
   m_TagString: Untagged
@@ -9426,7 +9425,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2458
+  m_VersionIndex: 2461
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9515,28 +9514,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910999612591935985}
   m_Mesh: {fileID: 0}
---- !u!64 &5481610907514301819
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910999612591935985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5168747982002452798
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,9 +9523,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3317710553277245421}
+  - component: {fileID: -1482016504347517538}
+  - component: {fileID: 3242062166988323915}
   m_Layer: 0
   m_Name: Pool
-  m_TagString: Untagged
+  m_TagString: Pool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9570,6 +9549,39 @@ Transform:
   - {fileID: 1966363681514978174}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1482016504347517538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168747982002452798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07399e645da29614ba92063fe6bae304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &3242062166988323915
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168747982002452798}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 7.4354653
+  m_Center: {x: -14.045238, y: 15.645201, z: 6.8148756}
 --- !u!1 &8413111801016952610
 GameObject:
   m_ObjectHideFlags: 0
@@ -9581,7 +9593,6 @@ GameObject:
   - component: {fileID: 1966363681514978174}
   - component: {fileID: 6978210665189594287}
   - component: {fileID: 7926552622788961576}
-  - component: {fileID: 4782833549314518922}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -9654,26 +9665,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4782833549314518922
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413111801016952610}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

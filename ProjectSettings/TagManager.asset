@@ -12,6 +12,8 @@ TagManager:
   - Shooter
   - Chick
   - Ground
+  - Pool
+  - Alpaca
   layers:
   - Default
   - TransparentFX
