@@ -11,11 +11,13 @@ public class SpitController : MonoBehaviour
 
     public float spitSpeed;
 
-    public Camera camera;
+    //public Camera camera;
 
-    public float spitTime = 5;
+    [Range(0,100)]public int spitTime = 5;
 
     public bool isDrink=false;
+
+    public LayerMask spitLayer;
 
     void Update()
     {
@@ -27,11 +29,12 @@ public class SpitController : MonoBehaviour
     }
     void SpawnSpit()
     {
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        var _camera = Camera.main;
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         
 
-        if(Physics.Raycast(ray,out hit))
+        if(Physics.Raycast(ray,out hit,spitLayer))
         {
             Vector3 direction = (hit.point - spitPoint.position).normalized;
 
@@ -41,25 +44,9 @@ public class SpitController : MonoBehaviour
 
             Rigidbody spitRigidbody = spitInstance.GetComponent<Rigidbody>();
 
-            spitRigidbody.velocity = direction * spitSpeed;
+            // spitRigidbody.velocity = direction * spitSpeed;
+            spitRigidbody.AddForce(spitPoint.right * spitSpeed,ForceMode.Impulse);
         }
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (isDrink&&Input.GetMouseButton(1))
-        {
-            Debug.Log("喝到水了");
-            Drink();
-        }
-    }
-
-    void Drink()
-    {
-        
-        //播放喝水动画
-        spitTime = 5;
-
-    }
-
 }

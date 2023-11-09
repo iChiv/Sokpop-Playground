@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,18 +16,34 @@ public class Spit : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Collider>().isTrigger = true;
+        // GetComponent<Collider>().isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player"))
+        {
+            Debug.Log(other.gameObject);
+            Vector3 collisionPoint = other.ClosestPointOnBounds(transform.position);
 
-        Vector3 collisionPoint = other.ClosestPointOnBounds(transform.position);
+            spitParticle.transform.position = collisionPoint;
+            spitParticle.Play();
 
-        spitParticle.transform.position = collisionPoint;
-        spitParticle.Play();
+            Destroy(gameObject,0.5f);
+        }
+    }
 
-        Destroy(gameObject);
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(other.gameObject);
+            //Vector3 collisionPoint = other.contacts);
 
+            //spitParticle.transform.position = collisionPoint;
+            spitParticle.Play();
+
+            Destroy(gameObject,0.5f);
+        }
     }
 }

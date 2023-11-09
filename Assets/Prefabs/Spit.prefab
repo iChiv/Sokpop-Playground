@@ -29,10 +29,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8984995999093859105}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0839996, y: 6.312, z: 4.271}
-  m_LocalScale: {x: 0.08587949, y: 0.05559015, z: 0.1879403}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.07, y: 0.045311287, z: 0.15318932}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8662019002330700468}
   m_Father: {fileID: 0}
@@ -100,14 +100,14 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.21434733
+  m_Center: {x: -0.014528153, y: 0.0068034977, z: 0.00014162927}
 --- !u!54 &1152520156280190536
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,8 +133,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 3
 --- !u!114 &4467957960938153838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +158,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2903047868718224081, guid: a444353df08758344ac25059d29ff0b0,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903047868718224081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903047868718224081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903047868718224081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.55
       objectReference: {fileID: 0}
@@ -175,6 +190,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HitVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: RotationModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: SizeBySpeedModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: SizeBySpeedModule.range.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414164186533763081, guid: a444353df08758344ac25059d29ff0b0,
+        type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: 6.283185
       objectReference: {fileID: 0}
     - target: {fileID: 4684432047101064968, guid: a444353df08758344ac25059d29ff0b0,
         type: 3}
