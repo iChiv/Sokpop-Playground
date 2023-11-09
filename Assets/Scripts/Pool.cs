@@ -19,7 +19,6 @@ public class Pool : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("hao");
             //UI
             spitController.isDrink = true;
             spitController.spitTime += 5;
