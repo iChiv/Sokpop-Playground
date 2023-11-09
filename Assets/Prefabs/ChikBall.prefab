@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 4824506382996151561}
   - component: {fileID: 5985039978283164379}
   - component: {fileID: 8803934424664229117}
+  - component: {fileID: 7032397031090915798}
   m_Layer: 8
   m_Name: ChikBall
   m_TagString: CanHit
@@ -374,6 +375,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goToShooter: {fileID: 5985039978283164379}
+--- !u!114 &7032397031090915798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839735706477521825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905655b12306a4f6e910f5724c8ffb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425612848853168217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,7 +1717,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1382
+  m_VersionIndex: 1385
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

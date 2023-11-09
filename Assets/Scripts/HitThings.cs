@@ -8,6 +8,7 @@ public class HitThings : MonoBehaviour
     public GameObject pressE;
     public GameObject player;
     public GameObject target;
+    public GameObject alpaca;
     public float hitForce;
     private bool _hitReady;
 
@@ -23,11 +24,15 @@ public class HitThings : MonoBehaviour
         if (_hitReady & Input.GetKeyDown(KeyCode.E))
         {
             target.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * hitForce, ForceMode.Impulse);
+            if (target.GetComponent<Bouns>() != null)
+            {
+                alpaca.GetComponent<DestoryBouns>().chickHit += 1;
+            }
             ImpulseSource.GenerateImpulse();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("CanHit"))
         {
