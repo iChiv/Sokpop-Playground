@@ -8,6 +8,8 @@ public class CarrotCount : MonoBehaviour
 {
     public int carrotCatched;
     public TextMeshProUGUI carrotCountDisplay;
+    
+    
 
     private void Awake()
     {

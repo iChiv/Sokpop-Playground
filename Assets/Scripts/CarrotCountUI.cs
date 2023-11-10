@@ -14,6 +14,6 @@ public class CarrotCountUI : MonoBehaviour
     void Update()
     {
         carrotNumber = alpaca.GetComponent<CarrotCount>().carrotCatched;
-        carrotUI.text = "You got "+carrotNumber.ToString() + " carrots in total, awesome!";
+        carrotUI.text = carrotNumber.ToString();
     }
 }

@@ -11,11 +11,6 @@ public class PlayerFloating : MonoBehaviour
     [SerializeField] public float rideSpringForce;
     [SerializeField] public float floatHeight;
     [SerializeField] public Rigidbody rb;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
@@ -54,15 +49,6 @@ public class PlayerFloating : MonoBehaviour
         }
 
     }
-
-    // public void UpdateUprightForce(float elapsed)
-    // {
-    //     Quaternion characterCurrent = transform.rotation;
-    //     // Quaternion toGoal = ShortestRotation()
-    //
-    //     Vector3 rotAxis;
-    //     float rotDegrees;
-    // }
     
     public static Quaternion ShortestRotation(Quaternion a, Quaternion b)
     {

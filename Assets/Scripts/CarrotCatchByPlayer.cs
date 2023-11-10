@@ -13,11 +13,14 @@ public class CarrotCatchByPlayer : MonoBehaviour
     public ParticleSystem success;
 
     private bool _catched = false;
+    public AudioClip carrotCatchedSFX;
+    public AudioSource carrotSoundSource;
 
     private void Awake()
     {
         player = GameObject.Find("PlayerCapsule");
         alpaca = GameObject.Find("Alpaca");
+        carrotSoundSource = alpaca.GetComponent<AudioSource>();
         success = GameObject.Find("Success Particles").GetComponent<ParticleSystem>();
     }
 
@@ -47,6 +50,8 @@ public class CarrotCatchByPlayer : MonoBehaviour
                 _catched = true;
             }
             //SFX
+            carrotSoundSource.clip = carrotCatchedSFX;
+            carrotSoundSource.Play();
             success.Play();
             Destroy(this.gameObject);
         }
