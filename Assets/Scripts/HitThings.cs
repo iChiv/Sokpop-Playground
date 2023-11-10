@@ -13,6 +13,8 @@ public class HitThings : MonoBehaviour
     private bool _hitReady;
 
     public CinemachineImpulseSource ImpulseSource;
+    public AudioClip hitSound;
+    public AudioSource alpacaAudioSource;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class HitThings : MonoBehaviour
                 alpaca.GetComponent<DestoryBouns>().chickHit += 1;
             }
             ImpulseSource.GenerateImpulse();
+            alpacaAudioSource.PlayOneShot(hitSound);
         }
     }
 

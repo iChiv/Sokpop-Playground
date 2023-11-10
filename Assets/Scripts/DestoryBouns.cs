@@ -15,6 +15,9 @@ public class DestoryBouns : MonoBehaviour
 
     public int cucurbitHit;
     public int cucurbitHitGoal;
+
+    public AudioClip bonusCarrot;
+    public AudioSource alpacaAudioSource;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -29,12 +32,14 @@ public class DestoryBouns : MonoBehaviour
         {
             chickHit = 0;
             Instantiate(carrot, carrotInChickBase.position, quaternion.identity);
+            alpacaAudioSource.PlayOneShot(bonusCarrot);
         }
 
         if (cucurbitHit >= cucurbitHitGoal)
         {
             cucurbitHit = 0;
             Instantiate(carrot, carrotInField.position, quaternion.identity);
+            alpacaAudioSource.PlayOneShot(bonusCarrot);
         }
     }
 }

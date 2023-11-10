@@ -13,6 +13,15 @@ public class CarrotGrow : MonoBehaviour
     public float growProcess;
     public float growStage;
 
+    public AudioClip bonusCarrot;
+    public AudioSource alpacaAudioSource;
+
+    private void Start()
+    {
+        GameObject alpaca = GameObject.Find("Alpaca");
+        alpacaAudioSource = alpaca.GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         
@@ -21,6 +30,7 @@ public class CarrotGrow : MonoBehaviour
             lerper.To1(0.5f);
             Destroy(this.gameObject);
             Instantiate(carrot, this.transform.position, quaternion.identity);
+            alpacaAudioSource.PlayOneShot(bonusCarrot);
         }
     }
 

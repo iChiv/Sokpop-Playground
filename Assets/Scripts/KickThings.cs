@@ -14,6 +14,8 @@ public class KickThings : MonoBehaviour
     private bool _kickReady;
     
     public CinemachineImpulseSource ImpulseSource;
+    public AudioClip kickSound;
+    public AudioSource alpacaAudioSource;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class KickThings : MonoBehaviour
                 alpaca.GetComponent<DestoryBouns>().cucurbitHit += 1;
             }
             ImpulseSource.GenerateImpulse();
+            alpacaAudioSource.PlayOneShot(kickSound);
         }
     }
 

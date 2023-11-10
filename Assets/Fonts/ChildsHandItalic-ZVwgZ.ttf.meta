@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Child's Hand
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 86f106db76999d24c97a6af6faa460d9, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
