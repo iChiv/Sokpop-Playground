@@ -16,6 +16,6 @@ public class CarrotCount : MonoBehaviour
 
     private void Update()
     {
-        carrotCountDisplay.text = "You've Got " + carrotCatched.ToString() + " Carrots!";
+        carrotCountDisplay.text =  carrotCatched.ToString();
     }
 }
