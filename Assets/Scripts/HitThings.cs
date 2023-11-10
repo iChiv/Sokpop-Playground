@@ -16,6 +16,8 @@ public class HitThings : MonoBehaviour
     public AudioClip hitSound;
     public AudioSource alpacaAudioSource;
 
+    public ParticleSystem hitVFX;
+
     private void Start()
     {
         _hitReady = false;
@@ -30,6 +32,7 @@ public class HitThings : MonoBehaviour
             {
                 alpaca.GetComponent<DestoryBouns>().chickHit += 1;
             }
+            hitVFX.Play();
             ImpulseSource.GenerateImpulse();
             alpacaAudioSource.PlayOneShot(hitSound);
         }

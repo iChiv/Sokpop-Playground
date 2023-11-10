@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Serialization;
 
 public class KickThings : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class KickThings : MonoBehaviour
     public GameObject player;
     public GameObject target;
     public GameObject alpaca;
+    
     public float kickForce;
     private bool _kickReady;
     
     public CinemachineImpulseSource ImpulseSource;
     public AudioClip kickSound;
     public AudioSource alpacaAudioSource;
+    public ParticleSystem kickVFX;
 
     private void Start()
     {
@@ -31,6 +34,7 @@ public class KickThings : MonoBehaviour
             {
                 alpaca.GetComponent<DestoryBouns>().cucurbitHit += 1;
             }
+            kickVFX.Play();
             ImpulseSource.GenerateImpulse();
             alpacaAudioSource.PlayOneShot(kickSound);
         }
