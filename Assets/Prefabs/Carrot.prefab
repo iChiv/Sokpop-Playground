@@ -121,6 +121,8 @@ MonoBehaviour:
   speed: 20
   catchRange: 5
   success: {fileID: 0}
+  carrotCatchedSFX: {fileID: 8300000, guid: 785bfe74e6e0a554fb4db17e36a12d62, type: 3}
+  carrotSoundSource: {fileID: 0}
 --- !u!1 &3017907856917306469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1090,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1625
+  m_VersionIndex: 1628
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2138,7 +2140,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1625
+  m_VersionIndex: 1628
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3788,7 +3790,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2940
+  m_VersionIndex: 2943
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4838,7 +4840,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1625
+  m_VersionIndex: 1628
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
