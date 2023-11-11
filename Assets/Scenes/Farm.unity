@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -34586,7 +34586,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5351dfbb890e4cb4887c7e6d3634d1ab, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -53637,6 +53637,16 @@ PrefabInstance:
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minCurve.m_Curve.Array.data[1].outWeight
       value: 0.33333334
       objectReference: {fileID: 0}
+    - target: {fileID: 4497875115626446243, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: spitting
+      value: 
+      objectReference: {fileID: 8300000, guid: 88f092c50290750439b39cc9de71fadb, type: 3}
+    - target: {fileID: 4497875115626446243, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: alpacaAudioSource
+      value: 
+      objectReference: {fileID: 411113531}
     - target: {fileID: 4599072997959200711, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
         type: 3}
       propertyPath: m_Text
@@ -53670,9 +53680,19 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ea2e0f692a3ec4d3b9e5b57f4206c1d3, type: 3}
     - target: {fileID: 5053907947390134556, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
         type: 3}
+      propertyPath: chickHitGoal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053907947390134556, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
       propertyPath: carrotInField
       value: 
       objectReference: {fileID: 1392041993}
+    - target: {fileID: 5053907947390134556, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: cucurbitHitGoal
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5053907947390134556, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
         type: 3}
       propertyPath: alpacaAudioSource

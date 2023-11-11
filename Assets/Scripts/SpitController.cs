@@ -19,6 +19,9 @@ public class SpitController : MonoBehaviour
 
     public LayerMask spitLayer;
 
+    public AudioSource alpacaAudioSource;
+    public AudioClip spitting;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)&&spitTime>0)
@@ -33,7 +36,6 @@ public class SpitController : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         
-
         if(Physics.Raycast(ray,out hit,spitLayer))
         {
             Vector3 direction = (hit.point - spitPoint.position).normalized;
@@ -47,6 +49,8 @@ public class SpitController : MonoBehaviour
             // spitRigidbody.velocity = direction * spitSpeed;
             spitRigidbody.AddForce(spitPoint.right * spitSpeed,ForceMode.Impulse);
         }
+        
+        alpacaAudioSource.PlayOneShot(spitting);
 
     }
 }

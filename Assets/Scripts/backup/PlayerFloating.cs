@@ -6,6 +6,8 @@ using UnityEngine.Diagnostics;
 
 public class PlayerFloating : MonoBehaviour
 {
+    //At very first of this project, I tried to make a floating body for player because it looks pretty interesting.
+    
     [SerializeField] public float springForce;
     [SerializeField] public float rideSpringDamper;
     [SerializeField] public float rideSpringForce;

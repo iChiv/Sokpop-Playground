@@ -7,15 +7,20 @@ public class CarrotCatchByPlayer : MonoBehaviour
 {
     public GameObject player;
     public GameObject alpaca;
+    
+    [Header("Catch Function")]
     public float speed;
-
     public float catchRange;
+    
+    [Header("vFX")]
     public ParticleSystem success;
-
-    private bool _catched = false;
+    
+    [Header("VFX")]
     public AudioClip carrotCatchedSFX;
     public AudioSource carrotSoundSource;
 
+    private bool _catched = false;
+    
     private void Awake()
     {
         player = GameObject.Find("PlayerCapsule");

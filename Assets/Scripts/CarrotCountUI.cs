@@ -7,7 +7,6 @@ public class CarrotCountUI : MonoBehaviour
 {
     public GameObject alpaca;
     public int carrotNumber;
-
     public TextMeshProUGUI carrotUI;
 
     // Update is called once per frame

@@ -13,6 +13,7 @@ public class WelcomeMenu : MonoBehaviour
 
     public void ExitGame()
     {
+        //not useful in WebGL Build
         Application.Quit();
     }
 }

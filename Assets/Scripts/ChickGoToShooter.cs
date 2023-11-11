@@ -7,9 +7,12 @@ using UnityEngine.Serialization;
 
 public class ChickGoToShooter : MonoBehaviour
 {
+    [Header("Destination")]
     public Transform shooterEnter;
     public Transform shooterOut;
     public float speed;
+    
+    [Header("Launch Force")]
     public float force;
     public GameObject newChick;
 

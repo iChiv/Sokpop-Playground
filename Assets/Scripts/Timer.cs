@@ -5,6 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public bool playing;
+    [Header("Play Time Limit")]
     public float timeLimited;
     [Range(0,600)]
     public float timeCountDown;
