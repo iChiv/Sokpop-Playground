@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,8 +12,10 @@ public class TimerDisplay : MonoBehaviour
     private GameObject _timer;
 
     private Timer _gameTimer;
+    //
+    // public Image timeMeter;
 
-    public Image timeMeter;
+    public TextMeshProUGUI timerText;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +26,19 @@ public class TimerDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _totalTime = _gameTimer.timeLimited;
-        _timePlayed = _gameTimer.timeCountDown;
-        timeMeter.fillAmount = _timePlayed / _totalTime;
+        // _totalTime = _gameTimer.timeLimited;
+         _timePlayed = _gameTimer.timeCountDown;
+        // timeMeter.fillAmount = _timePlayed / _totalTime;
+
+        if (_timePlayed > 0)
+        {
+            timerText.text = string.Format("{0:d2}:{1:d2}", (int)_timePlayed / 60, (int)_timePlayed % 60);
+        }
+        else
+        {
+            timerText.text = "00:00";
+            timerText.color = Color.red;
+        }
 
     }
 }

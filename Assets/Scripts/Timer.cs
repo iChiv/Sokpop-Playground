@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     public bool playing;
     public float timeLimited;
-
+    [Range(0,600)]
     public float timeCountDown;
 
     public GameObject gameOver;
