@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 {
     public GameObject menu;
     private GameObject _timer;
+    public GameObject spitPoint;
 
     private Timer _gameTimer;
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class Menu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             menu.SetActive(true);
             Time.timeScale = 0;
+            spitPoint.GetComponent<SpitController>().enabled = false;
         }
     }
 
@@ -41,6 +43,7 @@ public class Menu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         menu.SetActive(false);
         Time.timeScale = 1;
+        spitPoint.GetComponent<SpitController>().enabled = true;
     }
 
     public void ReturnToWelcome()

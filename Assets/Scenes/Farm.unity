@@ -35618,6 +35618,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1048894015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1444069119103801843, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+    type: 3}
+  m_PrefabInstance: {fileID: 1531022938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1049861708
 Mesh:
   m_ObjectHideFlags: 0
@@ -53708,6 +53714,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.674
       objectReference: {fileID: 0}
+    - target: {fileID: 6787915210342758843, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787915210342758843, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.089757
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787915210342758843, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 4.400783e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787915210342758843, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.04487957
+      objectReference: {fileID: 0}
     - target: {fileID: 7942162087207798269, guid: 2553cec8fdb3eb643bbe9f2ec880c472,
         type: 3}
       propertyPath: hitVFX
@@ -55414,6 +55440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 942763582}
+  spitPoint: {fileID: 1048894015}
 --- !u!4 &1591285002
 Transform:
   m_ObjectHideFlags: 0
