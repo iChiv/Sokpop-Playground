@@ -25,6 +25,10 @@ public class HitThings : MonoBehaviour
 
     private void Update()
     {
+        if (_hitReady)
+        {
+            pressE.SetActive(true);
+        }
         if (_hitReady & Input.GetKeyDown(KeyCode.E))
         {
             target.gameObject.GetComponent<Rigidbody>().AddForce(player.transform.forward * hitForce, ForceMode.Impulse);

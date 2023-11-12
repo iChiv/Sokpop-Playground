@@ -27,12 +27,6 @@ public class AlpacaAnimation : MonoBehaviour
     private float t;
     public float speed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -44,17 +38,7 @@ public class AlpacaAnimation : MonoBehaviour
         }
 
     }
-
-    // IEnumerator EarCoroutine()
-    // {
-    //     earL.transform.rotation = Quaternion.Slerp(earL.transform.rotation, earL1.rotation, 1f);
-    //     earR.transform.rotation = Quaternion.Slerp(earR.transform.rotation, earR1.rotation, 1f);
-    //     yield return new WaitForSeconds(2f);
-    //     // earL.transform.rotation = Quaternion.Slerp(earL.transform.rotation, earL0.rotation, 1f);
-    //     // earR.transform.rotation = Quaternion.Slerp(earR.transform.rotation, earR0.rotation, 1f);
-    //     yield return new WaitForSeconds(2f);
-    // }
-
+    
     IEnumerator GapCoroutione()
     {
         yield return new WaitForSeconds(5f);
