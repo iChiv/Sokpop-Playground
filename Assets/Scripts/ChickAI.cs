@@ -38,7 +38,9 @@ public class ChickAI : MonoBehaviour
  
         int t = Random.Range(0, navMeshData.indices.Length - 3);
  
-        Vector3 point = Vector3.Lerp(navMeshData.vertices[navMeshData.indices[t]], navMeshData.vertices[navMeshData.indices[t + 1]], Random.value);
+        Vector3 point = Vector3.Lerp(
+            navMeshData.vertices[navMeshData.indices[t]], 
+            navMeshData.vertices[navMeshData.indices[t + 1]], Random.value);
         point = Vector3.Lerp(point, navMeshData.vertices[navMeshData.indices[t + 2]], Random.value);
  
         return point;

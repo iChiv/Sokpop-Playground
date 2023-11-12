@@ -32,11 +32,16 @@ public class Pool : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && spitController.spitTime < 100)
         {
             //UI
             spitController.isDrink = true;
             spitController.spitTime += drinkSpeed * Time.deltaTime;
+        }
+        if (spitController.spitTime >= 100)
+        {
+            alpacaAudioSource.Stop();
+            alpacaAudioSource.loop = false;
         }
     }
 

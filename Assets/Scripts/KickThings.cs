@@ -27,6 +27,8 @@ public class KickThings : MonoBehaviour
 
     private void Update()
     {
+        if(_kickReady)
+        {pressE.SetActive(true);}
         if (_kickReady & Input.GetKeyDown(KeyCode.E))
         {
             target.gameObject.GetComponent<Rigidbody>().AddForce((-player.transform.forward+player.transform.up) * kickForce, ForceMode.Impulse);
